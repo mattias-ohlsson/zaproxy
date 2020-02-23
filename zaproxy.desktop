@@ -1,5 +1,4 @@
 [Desktop Entry]
-Categories=System;Security;
 Type=Application
 Terminal=false
 Name=OWASP ZAP
@@ -8,3 +7,4 @@ Comment=Automatically find security vulnerabilities in your web applications whi
 Exec=/usr/share/zaproxy/zap.sh
 Icon=zaproxy
 StartupNotify=true
+Categories=System;Security;
