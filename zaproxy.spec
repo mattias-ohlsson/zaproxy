@@ -13,6 +13,8 @@ BuildArch:      noarch
 BuildRequires:  java-11-openjdk
 BuildRequires:  desktop-file-utils
 
+Requires:       java-headless
+
 %description
 The OWASP Zed Attack Proxy (ZAP) is one of the world’s most popular free
 security tools and is actively maintained by a dedicated international team
