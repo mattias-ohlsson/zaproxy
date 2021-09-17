@@ -1,5 +1,5 @@
 Name:           zaproxy
-Version:        2.9.0
+Version:        2.10.0
 Release:        1%{?dist}
 Summary:        The OWASP Zed Attack Proxy
 
@@ -49,5 +49,8 @@ desktop-file-install --dir=${RPM_BUILD_ROOT}%{_datadir}/applications %{SOURCE1}
 %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Fri Sep 17 2021 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 2.10.0-1
+- Update to 2.10.0
+
 * Sat Feb 22 2020 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 2.9.0-1
 - Initial build
