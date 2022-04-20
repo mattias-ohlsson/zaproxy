@@ -1,5 +1,5 @@
 Name:           zaproxy
-Version:        2.10.0
+Version:        2.11.1
 Release:        1%{?dist}
 Summary:        The OWASP Zed Attack Proxy
 
@@ -10,7 +10,7 @@ Source0:        https://github.com/zaproxy/zaproxy/archive/v%{version}.tar.gz
 Source1:        %{name}.desktop
 BuildArch:      noarch
 
-BuildRequires:  java-11-openjdk
+BuildRequires:  java-openjdk
 BuildRequires:  desktop-file-utils
 
 Requires:       java
@@ -27,7 +27,7 @@ testing.
 %autosetup
 
 %build
-JAVA_HOME=/usr/lib/jvm/jre-11-openjdk ./gradlew build
+./gradlew build --exclude-task test
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -49,6 +49,10 @@ desktop-file-install --dir=${RPM_BUILD_ROOT}%{_datadir}/applications %{SOURCE1}
 %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Wed Apr 20 2022 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 2.11.1-1
+- Update to 2.11.1
+- Use silent mode
+
 * Fri Sep 17 2021 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 2.10.0-1
 - Update to 2.10.0
 
